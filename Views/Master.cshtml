@@ -8,45 +8,45 @@
 <html>
 	<head>
 		<title>AarhusWebDevCorp</title>
-		 <meta charset="UTF-8">
-  <meta name="description" content="AarhusWebDevCorp">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="Joshua">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+        <meta name="description" content="AarhusWebDevCorp">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Joshua">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<link rel="stylesheet" href="/css/main.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="/css/main.css" />
+
 	
 	</head>
 	
-	<body>
+    <body>
 
-	<!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="../">Logo</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-   @Umbraco.RenderMacro("mainMenu")
-</nav>
-
-
-	
-		
-		@RenderBody()
-		
-		<!-- Footer -->
-		<div class="container-fluid footer">
-			<div class="container">
-
-				@Model.Value("footerText")
-			</div>
-		</div>
+	    <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../">Aarhus Web Dev Corporation</a>
     
-    <!-- Scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            @Umbraco.RenderMacro("mainMenu")
+        </nav>
+
+        @RenderBody()
+		
+        <!-- Footer -->
+        <div class="container-fluid footer">
+            <div class="container">
+            @Model.Value("footerText")
+	        </div>
+        </div>
+    
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	
-	</body>
+    </body>
 </html>

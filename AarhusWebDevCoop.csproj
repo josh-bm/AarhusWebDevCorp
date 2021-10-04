@@ -2816,6 +2816,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\SetDefaultRenderMvcControllerComposer.cs" />
+    <Compile Include="App_Data\Models\AboutPage.generated.cs" />
     <Compile Include="App_Data\Models\ArticleItem.generated.cs" />
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\ContactPage.generated.cs" />
