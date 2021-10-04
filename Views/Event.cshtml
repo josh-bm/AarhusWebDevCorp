@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Event>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+@{ var items = Model.Value<IEnumerable<IPublishedElement>>("myPropertyAlias");
+
+    @Model.Location.Value("address")
+
+    foreach (Speaker speaker in Model.Speakers)
+    {
+        var firstName = speaker.Value<string>("description");
+
+
+
+        <p>@speaker.FirstName</p>
+
+    }
+}

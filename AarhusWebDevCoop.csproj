@@ -298,6 +298,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AarhusWebDevCoop.mdf" />
+    <Content Include="App_Data\AarhusWebDevCoop_log.ldf">
+      <DependentUpon>AarhusWebDevCoop.mdf</DependentUpon>
+    </Content>
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -2811,17 +2815,25 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\SetDefaultRenderMvcControllerComposer.cs" />
     <Compile Include="App_Data\Models\ArticleItem.generated.cs" />
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\ContactPage.generated.cs" />
+    <Compile Include="App_Data\Models\Event.generated.cs" />
+    <Compile Include="App_Data\Models\EventsOverview.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
+    <Compile Include="App_Data\Models\Guest.generated.cs" />
     <Compile Include="App_Data\Models\HomePage.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
+    <Compile Include="App_Data\Models\Location.generated.cs" />
+    <Compile Include="App_Data\Models\Locations.generated.cs" />
     <Compile Include="App_Data\Models\Login.generated.cs" />
     <Compile Include="App_Data\Models\NavigationAndSeo1.generated.cs" />
     <Compile Include="App_Data\Models\ProjectItem.generated.cs" />
     <Compile Include="App_Data\Models\ProjectsOverview.generated.cs" />
+    <Compile Include="App_Data\Models\RelatedContent.generated.cs" />
+    <Compile Include="App_Data\Models\Speaker.generated.cs" />
     <Compile Include="App_Data\Models\TextPage.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />
@@ -2966,6 +2978,9 @@
     <Content Include="Views\Partials\ContactForm.cshtml" />
     <Content Include="Views\Login.cshtml" />
     <Content Include="Views\MacroPartials\mainMenu.cshtml" />
+    <Content Include="Views\Event.cshtml" />
+    <Content Include="Views\EventsOverview.cshtml" />
+    <Content Include="Views\Partials\loginForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2973,7 +2988,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\SetDefaultRenderMvcControllerComposer\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
