@@ -1,0 +1,10 @@
+Remote repository link:
+https://github.com/joshbm-git/AarhusWebDevCorp
+
+Active member login:
+username: peterthompson
+password: peterthompson
+
+Guest member login:
+username: guestmember1
+password guestmember1
