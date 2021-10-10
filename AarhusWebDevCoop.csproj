@@ -375,6 +375,11 @@
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Umbraco\assets\css\canvasdesigner.css" />
     <Content Include="Umbraco\assets\css\installer.css" />
     <Content Include="Umbraco\assets\css\nonodes.style.min.css" />
@@ -2824,12 +2829,15 @@
     <Compile Include="App_Data\Models\EventsOverview.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
+    <Compile Include="App_Data\Models\ForbiddenAccess.generated.cs" />
     <Compile Include="App_Data\Models\Guest.generated.cs" />
     <Compile Include="App_Data\Models\HomePage.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Location.generated.cs" />
     <Compile Include="App_Data\Models\Locations.generated.cs" />
     <Compile Include="App_Data\Models\Login.generated.cs" />
+    <Compile Include="App_Data\Models\MembersPage.generated.cs" />
+    <Compile Include="App_Data\Models\Message.generated.cs" />
     <Compile Include="App_Data\Models\NavigationAndSeo1.generated.cs" />
     <Compile Include="App_Data\Models\ProjectItem.generated.cs" />
     <Compile Include="App_Data\Models\ProjectsOverview.generated.cs" />
@@ -2982,6 +2990,9 @@
     <Content Include="Views\Event.cshtml" />
     <Content Include="Views\EventsOverview.cshtml" />
     <Content Include="Views\Partials\loginForm.cshtml" />
+    <Content Include="Views\AboutPage.cshtml" />
+    <Content Include="Views\MacroPartials\listNewestProjects.cshtml" />
+    <Content Include="Views\MembersPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

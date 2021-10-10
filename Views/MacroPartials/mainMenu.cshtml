@@ -19,28 +19,33 @@
     <ul class="nav navbar-nav">
         @foreach (var item in selection)
         {
-
             if (item.Children().Count() > 0)
             {
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@item.Name<span class="caret"></span></a>
                     <ul class="dropdown-menu">
 
-                        @foreach (var subItem in item.Children())
+                        @foreach (var subItem in item.Children.Where(x => x.IsVisible()).ToArray())
                         {
+                            if (Umbraco.MemberHasAccess(subItem.Path))
+                            {
 
                             <li><a class="dropdown-item" href="@subItem.Url">@subItem.Name</a></li>
+                            }
                         }
 
                     </ul>
                 </li>
-            }
-            else
-            {
-                <li class="nav-item @(item.IsAncestorOrSelf(Model.Content) ? "current" : null)">
-                    <a class="nav-link" href="@item.Url">@item.Name</a>
-                </li>
-            }
+                }
+                else
+                {
+                    if (Umbraco.MemberHasAccess(item.Path))
+                    {
+                        <li class="nav-item @(item.IsAncestorOrSelf(Model.Content) ? "active" : null)">
+                            <a class="nav-link" href="@item.Url">@item.Name</a>
+                        </li>
+                    }
+                }
         }
     </ul>
 }

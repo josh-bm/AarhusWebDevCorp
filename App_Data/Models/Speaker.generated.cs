@@ -63,7 +63,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.16.0")]
 		[ImplementPropertyType("photo")]
-		public virtual global::Umbraco.Core.Models.MediaWithCrops Photo => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("photo");
+		public virtual global::Umbraco.Core.Models.PublishedContent.IPublishedContent Photo => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("photo");
 
 		///<summary>
 		/// Presentation

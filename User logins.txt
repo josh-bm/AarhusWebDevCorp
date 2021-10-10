@@ -13,3 +13,10 @@ activemember1
 Guest Member 1
 email1@email.com
 guestmember1
+
+Peter Thompson
+peterthompson
+peterthompson
+
+Susan Olsson
+susanolsson

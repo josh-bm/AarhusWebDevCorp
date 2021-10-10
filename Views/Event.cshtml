@@ -4,17 +4,17 @@
     Layout = "Master.cshtml";
 }
 
-@{ var items = Model.Value<IEnumerable<IPublishedElement>>("myPropertyAlias");
+@{
+    var items = Model.Value<IEnumerable<IPublishedElement>>("myPropertyAlias");
 
-    @Model.Location.Value("address")
+    Model.Location.Value("address");
 
     foreach (Speaker speaker in Model.Speakers)
     {
-        var firstName = speaker.Value<string>("description");
+        <p>@speaker.FirstName @speaker.LastName</p>
 
-
-
-        <p>@speaker.FirstName</p>
-
+        <p>@speaker.Presentation</p>
     }
 }
+
+
